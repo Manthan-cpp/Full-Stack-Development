@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 700px;
+            width: 900px;
+            background-color: rgb(187, 230, 123);
+            padding: 1px;
+            position: relative;
+            
+        }
+        .box{
+            height: 70px;
+            width: 70px;
+            background-color: green;
+            /* margin: 10px; */
+            animation: somethingx 3s linear infinite alternate,somethingy 0.50s ease-out alternate infinite ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 39px;
+            left: 0;
+        }
+        @keyframes somethingx {
+            from{
+                left: 0;
+            }
+            to{
+                left: 92%;
+            }
+        }
+        @keyframes somethingy {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Ball</div>
+    </div>
+</body>
+
+</html>
