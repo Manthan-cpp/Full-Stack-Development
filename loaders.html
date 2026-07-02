@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(23, 23, 23);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .loader {
+            height: 50px;
+            width: 50px;
+            /* margin: 10px; */
+        }
+
+        .loader1 {
+            border: 8px solid white;
+            border-radius: 50%;
+            border-top: 8px solid rgb(27, 65, 136);
+            animation: spin 1s infinite linear;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotateX(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader2 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: rgb(27, 65, 136);
+            animation: pulse 1s infinite ease;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.0);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(0.0);
+            }
+        }
+
+        .loader3 {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: rgb(27, 65, 136);
+            animation: bounce 0.5s infinite ease-out;
+        }
+        @keyframes bounce {
+            0%,100%{
+                transform: translateY(0);
+            }            
+            50%{
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader loader1"></div>
+    <div class="loader loader2"></div>
+    <div class="loader loader3"></div>
+    <div class="loader loader4"></div>
+    <div class="loader loader5"></div>
+    <div class="loader loader6"></div>
+    <div class="loader loader7"></div>
+    <div class="loader loader8"></div>
+    <div class="loader loader9"></div>
+    <div class="loader loader10"></div>
+</body>
+
+</html>
