@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: aquamarine;
+}
+.code{
+  display: flex;
+}
+.key{
+  display: flex;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <input type="text" id="keyboard" />
+
+    <div id="keycode" class="code">
+      <div id="text">Key Code : </div>
+      <p id="ans">None</p>
+    </div>
+
+    <div id="keyboard1" class="key">
+      <div id="key-pressed">Key Pressed : </div>
+      <p id="key-text">None</p>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
