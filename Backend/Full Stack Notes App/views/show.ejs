@@ -1,0 +1,111 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= filename %> — Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#09090b] text-white font-sans min-h-screen">
+
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <main class="relative max-w-4xl mx-auto px-5 sm:px-8 py-8">
+
+        <nav class="flex items-center justify-between mb-16">
+
+            <a href="/" class="flex items-center gap-3 text-zinc-500 hover:text-white transition group">
+                <div class="w-10 h-10 rounded-xl border border-white/10 bg-white/[0.03] flex items-center justify-center group-hover:bg-white/[0.07] transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </div>
+
+                <span class="text-sm font-medium">
+                    All notes
+                </span>
+            </a>
+
+            <div class="flex items-center gap-2 text-xs text-zinc-600">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                Saved
+            </div>
+
+        </nav>
+
+        <article>
+
+            <div class="mb-10">
+
+                <div class="flex items-center gap-2 text-xs text-zinc-600 uppercase tracking-widest font-semibold mb-5">
+                    <span>Note</span>
+                    <span>•</span>
+                    <span>Personal</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight break-words">
+                    <%= filename %>
+                </h1>
+
+                <div class="h-px bg-gradient-to-r from-white/10 via-white/5 to-transparent mt-8"></div>
+
+            </div>
+
+            <div class="rounded-3xl border border-white/10 bg-white/[0.025] p-6 sm:p-10 shadow-2xl shadow-black/20">
+
+                <div class="flex items-center gap-3 mb-8 pb-5 border-b border-white/5">
+                    <div class="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+                        </svg>
+                    </div>
+
+                    <span class="text-sm text-zinc-500">
+                        Note content
+                    </span>
+                </div>
+
+                <div class="text-zinc-300 text-base sm:text-lg leading-8 whitespace-pre-wrap break-words">
+                    <%= filedata %>
+                </div>
+
+            </div>
+
+            <div class="flex justify-between items-center mt-8">
+
+                <a
+                    href="/"
+                    class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/10 bg-white/[0.03] text-sm text-zinc-400 hover:text-white hover:bg-white/[0.06] transition"
+                >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    Back to notes
+                </a>
+
+                <span class="text-xs text-zinc-700">
+                    End of note
+                </span>
+
+            </div>
+
+        </article>
+
+        <footer class="py-16 text-center">
+            <p class="text-xs text-zinc-700">
+                Your thoughts. Your space.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
+```
